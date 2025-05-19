@@ -31,7 +31,7 @@ class Order:
     
     @price.setter
     def price(self, price):
-        if (price,(int, float)) and (1 <= price <= 10):
+        if isinstance(price,(int, float)) and (1 <= price <= 10):
             self._price = price
         else:
             return "price must be between 1.0 and 10.0."    
